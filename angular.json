@@ -121,6 +121,10 @@
               "devServerTarget": "johnsen-frontend-exercise-nava:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
