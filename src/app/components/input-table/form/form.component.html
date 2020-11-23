@@ -1,0 +1,110 @@
+<form class="usa-form" [formGroup]="householdMemberForm">
+    <div formGroupName="name">
+        <fieldset class="usa-fieldset">
+            <legend class="usa-legend">Name:</legend>  
+            <label class="usa-label" for="first_name">First name</label>
+            <input class="usa-input" id="first_name" formControlName="first_name" type="text" required aria-required="true">
+        
+            <label class="usa-label" for="middle_name">Middle name <span class="usa-hint">(optional)</span></label>
+            <input class="usa-input" id="middle_name" formControlName="middle_name" type="text">
+        
+            <label class="usa-label" for="last_name">Last name</label>
+            <input class="usa-input" id="last_name" formControlName="last_name" type="text" required aria-required="true">
+        </fieldset>
+    </div>
+
+    <div class="usa-character-count">
+      <div class="usa-form-group">
+        <label class="usa-label" for="description">
+            Description:
+        </label>
+        <span id="description-hint" class="usa-hint">
+            <!-- TODO: assess copy -->
+           ex. Parent / Child / Contact
+        </span>
+        <input class="usa-input usa-character-count__field" id="description" maxlength="25" formControlName="description" aria-describedby="description-info description-hint">
+      </div>
+      <span id="description-info" class="usa-hint usa-character-count__message" aria-live="polite">
+        You can enter up to 25 characters
+      </span>
+    </div>
+
+    <label class="usa-label" for="fruit">Favorite fruit:</label>
+    <div class="usa-combo-box">
+        <!-- TODO : move to interface, assess why not clearing on reset -->
+    <select
+        class="usa-select"
+        formControlName="fruit"
+        id="fruit">
+        <option value>Select a fruit:</option>
+        <option value="apple">Apple</option>
+        <option value="apricot">Apricot</option>
+        <option value="avocado">Avocado</option>
+        <option value="banana">Banana</option>
+        <option value="blackberry">Blackberry</option>
+        <option value="blood orange">Blood orange</option>
+        <option value="blueberry">Blueberry</option>
+        <option value="boysenberry">Boysenberry</option>
+        <option value="breadfruit">Breadfruit</option>
+        <option value="buddhas hand citron">Buddha's hand citron</option>
+        <option value="cantaloupe">Cantaloupe</option>
+        <option value="clementine">Clementine</option>
+        <option value="crab apple">Crab apple</option>
+        <option value="currant">Currant</option>
+        <option value="cherry">Cherry</option>
+        <option value="custard apple">Custard apple</option>
+        <option value="coconut">Coconut</option>
+        <option value="cranberry">Cranberry</option>
+        <option value="date">Date</option>
+        <option value="dragonfruit">Dragonfruit</option>
+        <option value="durian">Durian</option>
+        <option value="elderberry">Elderberry</option>
+        <option value="fig">Fig</option>
+        <option value="gooseberry">Gooseberry</option>
+        <option value="grape">Grape</option>
+        <option value="grapefruit">Grapefruit</option>
+        <option value="guava">Guava</option>
+        <option value="honeydew melon">Honeydew melon</option>
+        <option value="jackfruit">Jackfruit</option>
+        <option value="kiwifruit">Kiwifruit</option>
+        <option value="kumquat">Kumquat</option>
+        <option value="lemon">Lemon</option>
+        <option value="lime">Lime</option>
+        <option value="lychee">Lychee</option>
+        <option value="mandarine">Mandarine</option>
+        <option value="mango">Mango</option>
+        <option value="mangosteen">Mangosteen</option>
+        <option value="marionberry">Marionberry</option>
+        <option value="nectarine">Nectarine</option>
+        <option value="orange">Orange</option>
+        <option value="papaya">Papaya</option>
+        <option value="passionfruit">Passionfruit</option>
+        <option value="peach">Peach</option>
+        <option value="pear">Pear</option>
+        <option value="persimmon">Persimmon</option>
+        <option value="plantain">Plantain</option>
+        <option value="plum">Plum</option>
+        <option value="pineapple">Pineapple</option>
+        <option value="pluot">Pluot</option>
+        <option value="pomegranate">Pomegranate</option>
+        <option value="pomelo">Pomelo</option>
+        <option value="quince">Quince</option>
+        <option value="raspberry">Raspberry</option>
+        <option value="rambutan">Rambutan</option>
+        <option value="soursop">Soursop</option>
+        <option value="starfruit">Starfruit</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="tamarind">Tamarind</option>
+        <option value="tangelo">Tangelo</option>
+        <option value="tangerine">Tangerine</option>
+        <option value="ugli fruit">Ugli fruit</option>
+        <option value="watermelon">Watermelon</option>
+        <option value="white currant">White currant</option>
+        <option value="yuzu">Yuzu</option>
+    </select>
+    </div>
+
+</form>
+
+<button (click)="submit()"> Submit</button>
+<!-- {{ this.householdMemberForm.value | json }} -->

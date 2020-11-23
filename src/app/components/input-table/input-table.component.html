@@ -1,0 +1,20 @@
+<div class="display">
+    <table class="usa-table">
+        <thead>
+          <tr>
+            <th scope="col">Full Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Favorite Fruit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let x of householdList">
+            <th scope="row">{{ x.name.first_name }} {{ x.name.middle_name}} {{ x.name.last_name}}</th>
+            <td>{{ x.description }}</td>
+            <td>{{ x.fruit }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<app-form (formReady)="formInitialized($event)"></app-form>

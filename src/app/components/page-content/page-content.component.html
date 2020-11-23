@@ -1,0 +1,30 @@
+
+<div class="content">
+
+    <!-- TODO: track progress, make seperate component  -->
+    <div class="usa-step-indicator" aria-label="progress">
+        <ol class="usa-step-indicator__segments">
+            <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Your Personal Information <span class="usa-sr-only">completed</span></span>
+            </li>
+            <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
+            <span class="usa-step-indicator__segment-label">Your Plan <span class="usa-sr-only">completed</span></span>
+            </li>
+            <li class="usa-step-indicator__segment usa-step-indicator__segment--current" aria-current="true">
+            <span class="usa-step-indicator__segment-label">Your Household </span>
+            </li>
+            <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Your Payment Information <span class="usa-sr-only">not completed</span></span>
+            </li>
+            <li class="usa-step-indicator__segment">
+            <span class="usa-step-indicator__segment-label">Review and Submit <span class="usa-sr-only">not completed</span></span>
+            </li>
+        </ol>
+    </div>
+
+    <app-page-title title="Your Household"></app-page-title>
+    <app-page-intro text="Welcome to the marketplace! Review your household below."></app-page-intro>
+
+    <app-input-table></app-input-table>
+
+</div>
